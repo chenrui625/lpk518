@@ -2,207 +2,195 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>兼職徵才｜誠徵夥伴</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#f53d2d">
+<title>兼職徵才｜全職也歡迎｜加入 LINE 了解</title>
+<meta name="description" content="兼職、全職都歡迎，寶媽、大學生、上班族皆可。加入 LINE 了解條件要求。">
+<meta property="og:title" content="兼職徵才｜全職也歡迎">
+<meta property="og:description" content="寶媽、大學生、上班族皆可，加入 LINE 了解條件要求。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://lpk518.com/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23f53d2d'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>徵</text></svg>">
 <style>
   :root{
     --orange:#ee4d2d;
     --orange-deep:#f53d2d;
     --line:#06c755;
+    --line-deep:#05b04d;
     --ink:#222;
-    --muted:#888;
-    --bg:#f5f5f5;
+    --muted:#7a7a7a;
+    --bg:#f7f7f7;
     --card:#fff;
   }
   *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
-  html,body{height:100%;}
+  html{-webkit-text-size-adjust:100%;}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;
-    background:linear-gradient(180deg,#e9e9e9 0%,#f5f5f5 100%);
     color:var(--ink);
-    display:flex;
-    justify-content:center;
-    min-height:100vh;
+    background:var(--bg);
+    -webkit-font-smoothing:antialiased;
   }
   a{text-decoration:none;color:inherit;}
 
-  /* 行動 App 容器：手機全寬、桌面居中窄條 */
+  /* 手機全寬；桌面居中窄條預覽 */
   .app{
     width:100%;
-    max-width:480px;
+    max-width:520px;
+    margin:0 auto;
     background:var(--bg);
     min-height:100vh;
-    box-shadow:0 0 40px rgba(0,0,0,.12);
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    padding-bottom:96px; /* 留空間給底部浮動按鈕 */
+    padding-bottom:calc(96px + env(safe-area-inset-bottom));
   }
 
-  /* ── 頂部橘色 Header ── */
-  .topbar{
-    background:linear-gradient(135deg,#ff6b35 0%,var(--orange-deep) 100%);
-    padding:14px 16px 16px;
-  }
-  .brand{
-    display:flex;align-items:center;gap:8px;margin-bottom:12px;
-  }
-  .logo{
-    width:34px;height:34px;border-radius:10px;
-    background:#fff;display:grid;place-items:center;flex:none;
-    font-weight:800;color:var(--orange-deep);font-size:16px;
-    letter-spacing:-1px;
-  }
-  .brand-name{
-    color:#fff;font-weight:800;font-size:19px;letter-spacing:.5px;
-  }
-  .brand-name small{
-    display:block;font-size:11px;font-weight:500;opacity:.92;letter-spacing:2px;
-  }
-  .searchbar{
-    background:#fff;border-radius:999px;height:38px;
-    display:flex;align-items:center;gap:8px;padding:0 14px;
-    color:#bdbdbd;font-size:13px;
-    box-shadow:0 2px 6px rgba(0,0,0,.08);
-  }
-  .searchbar svg{flex:none;opacity:.55;}
-
-  /* ── Hero 主視覺 ── */
+  /* ── 首屏 Hero：蝦皮橘漸層，一開就懂 ── */
   .hero{
-    margin:14px 14px 0;background:var(--card);
-    border-radius:16px;padding:34px 24px;text-align:center;
-    position:relative;overflow:hidden;
+    background:linear-gradient(160deg,#ff7a3d 0%,#f53d2d 55%,#e02d1f 100%);
+    padding:calc(44px + env(safe-area-inset-top)) 22px 40px;
+    text-align:center;
+    color:#fff;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";position:absolute;right:-60px;top:-60px;width:180px;height:180px;
+    border-radius:50%;background:rgba(255,255,255,.08);
   }
   .hero::before{
-    content:"";position:absolute;inset:0;
-    background:radial-gradient(circle at 15% 0%,rgba(238,77,45,.10),transparent 55%),
-               radial-gradient(circle at 85% 100%,rgba(238,77,45,.10),transparent 55%);
+    content:"";position:absolute;left:-40px;bottom:-70px;width:160px;height:160px;
+    border-radius:50%;background:rgba(255,255,255,.06);
   }
   .badge{
-    display:inline-block;background:rgba(238,77,45,.10);color:var(--orange-deep);
-    font-size:12px;font-weight:700;padding:5px 14px;border-radius:999px;
-    letter-spacing:1px;margin-bottom:16px;
+    display:inline-block;background:rgba(255,255,255,.22);
+    color:#fff;font-size:13px;font-weight:700;padding:6px 16px;border-radius:999px;
+    letter-spacing:2px;margin-bottom:22px;
+    backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);
+    position:relative;z-index:1;
   }
   .hero h1{
-    font-size:32px;line-height:1.3;font-weight:800;letter-spacing:1px;
-    position:relative;
+    font-size:clamp(34px,10vw,44px);
+    line-height:1.25;font-weight:900;letter-spacing:2px;
+    position:relative;z-index:1;
   }
-  .hero h1 .hot{color:var(--orange-deep);}
+  .hero h1 .full{
+    display:block;font-size:clamp(20px,6vw,26px);font-weight:700;
+    opacity:.96;margin-top:6px;letter-spacing:4px;
+  }
   .sub{
-    margin-top:12px;color:var(--muted);font-size:14px;letter-spacing:1px;
-    position:relative;
+    margin-top:14px;color:rgba(255,255,255,.92);font-size:15px;
+    letter-spacing:2px;position:relative;z-index:1;
   }
 
   .btn-line{
-    margin-top:26px;display:flex;align-items:center;justify-content:center;gap:10px;
-    background:var(--line);color:#fff;font-weight:700;font-size:16px;
-    padding:15px 0;border-radius:999px;letter-spacing:1px;
-    box-shadow:0 6px 18px rgba(6,199,85,.35);
-    transition:transform .12s ease,box-shadow .12s ease;
-    position:relative;
+    margin-top:30px;display:flex;align-items:center;justify-content:center;gap:10px;
+    background:var(--line);color:#fff;font-weight:800;font-size:17px;
+    min-height:58px;padding:0 24px;border-radius:999px;letter-spacing:2px;
+    box-shadow:0 8px 24px rgba(0,0,0,.22);
+    position:relative;z-index:1;
+    transition:transform .08s ease;
   }
-  .btn-line:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(6,199,85,.42);}
-  .btn-line:active{transform:translateY(0);}
-  .btn-line svg{flex:none;}
+  .btn-line:active{transform:scale(.97);}
+  .btn-line svg{flex:none;filter:drop-shadow(0 1px 1px rgba(0,0,0,.15));}
+  .btn-hint{
+    margin-top:14px;font-size:12px;color:rgba(255,255,255,.78);
+    letter-spacing:1px;position:relative;z-index:1;
+  }
 
-  /* ── 賣點 grid（蝦皮分類感） ── */
-  .perks{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:10px;
-    margin:14px 14px 0;
+  /* ── 適合對象 ── */
+  .section{
+    padding:30px 18px 8px;
   }
-  .perk{
-    background:var(--card);border-radius:14px;padding:18px 8px 14px;
-    display:flex;flex-direction:column;align-items:center;gap:10px;
+  .section-title{
+    text-align:center;font-size:19px;font-weight:800;letter-spacing:2px;
+    margin-bottom:6px;
   }
-  .perk .ic{
-    width:46px;height:46px;border-radius:50%;
-    background:linear-gradient(135deg,#ff6b35,var(--orange-deep));
+  .section-desc{
+    text-align:center;color:var(--muted);font-size:13px;letter-spacing:1px;
+    margin-bottom:20px;
+  }
+  .who{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  }
+  .who-card{
+    background:var(--card);border-radius:16px;padding:22px 8px 18px;
+    display:flex;flex-direction:column;align-items:center;gap:12px;
+    box-shadow:0 2px 10px rgba(0,0,0,.05);
+  }
+  .who-card .ic{
+    width:52px;height:52px;border-radius:50%;
+    background:linear-gradient(135deg,#ff7a3d,var(--orange-deep));
     display:grid;place-items:center;color:#fff;
   }
-  .perk span{font-size:12px;font-weight:600;color:#444;text-align:center;}
+  .who-card span{font-size:15px;font-weight:700;color:#333;letter-spacing:1px;}
+
+  /* ── 底部說明 ── */
+  .foot{
+    text-align:center;color:#b0b0b0;font-size:12px;margin:26px 18px 4px;
+    letter-spacing:1px;line-height:1.8;
+  }
 
   /* ── 底部浮動 LINE 按鈕 ── */
   .float{
-    position:fixed;left:50%;bottom:18px;transform:translateX(-50%);
-    width:min(440px,calc(100% - 32px));
+    position:fixed;left:50%;transform:translateX(-50%);
+    bottom:calc(16px + env(safe-area-inset-bottom));
+    width:min(480px,calc(100% - 32px));
     background:var(--line);color:#fff;font-weight:800;font-size:16px;
-    padding:16px 0;border-radius:999px;text-align:center;letter-spacing:1px;
-    box-shadow:0 8px 24px rgba(6,199,85,.40);
+    min-height:56px;padding:0 20px;border-radius:999px;
     display:flex;align-items:center;justify-content:center;gap:10px;
-    transition:transform .12s ease,box-shadow .12s ease;
-    z-index:10;
+    box-shadow:0 8px 24px rgba(6,199,85,.40);
+    letter-spacing:2px;z-index:50;
+    transition:transform .08s ease;
   }
-  .float:hover{transform:translateX(-50%) translateY(-2px);box-shadow:0 10px 28px rgba(6,199,85,.48);}
+  .float:active{transform:translateX(-50%) scale(.97);}
   .float svg{flex:none;}
 
-  /* ── 底部小字 ── */
-  .foot{
-    text-align:center;color:#b0b0b0;font-size:11px;margin:24px 14px 8px;
-    letter-spacing:.5px;
-  }
-
-  @media (prefers-reduced-motion: reduce){
-    .btn-line,.float{transition:none;}
+  @media (min-width:520px){
+    .float{box-shadow:0 8px 24px rgba(6,199,85,.40);}
   }
 </style>
 </head>
 <body>
   <div class="app">
-    <header class="topbar">
-      <div class="brand">
-        <div class="logo">徵</div>
-        <div class="brand-name">兼職徵才<small>誠徵夥伴</small></div>
-      </div>
-      <div class="searchbar">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.5" y2="16.5"></line></svg>
-        尋找你的兼職工作機會…
-      </div>
-    </header>
+    <section class="hero">
+      <span class="badge">🔥 火熱招募中</span>
+      <h1>兼職<span class="full">全職也歡迎</span></h1>
+      <p class="sub">寶媽 · 大學生 · 上班族 皆可</p>
+      <a class="btn-line" href="https://line.me/ti/p/~lpk518" target="_blank" rel="noopener">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.02 2 10.98c0 2.92 1.41 5.52 3.62 7.2L5 21.5l3.55-1.7c1.08.3 2.24.46 3.45.46 5.52 0 10-4.02 10-8.98S17.52 2 12 2zm0 2.2c4.3 0 7.78 3.04 7.78 6.78s-3.48 6.78-7.78 6.78c-1.18 0-2.3-.2-3.32-.56l-.5-.18-2.04.98.38-1.98-.34-.4C4.82 15.06 4.22 13.58 4.22 10.98 4.22 7.24 7.7 4.2 12 4.2zm-3.05 5.3c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm6.1 0c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm-6.37 1.35c.47.48 1.05.86 1.72 1.13.18.07.37.07.53 0 .69-.27 1.28-.65 1.75-1.14.1-.1.23-.13.35-.07.12.05.16.19.12.3-.08.22-.55.64-.76.84-.33.32-.77.57-1.24.73-.28.1-.6.1-.88 0-.47-.16-.9-.41-1.23-.73-.2-.2-.67-.62-.76-.84-.04-.11 0-.25.12-.3.12-.06.25-.03.35.07z"/></svg>
+        加入 LINE 了解條件要求
+      </a>
+      <p class="btn-hint">點擊後自動開啟 LINE，加好友即可諮詢</p>
+    </section>
 
-    <main>
-      <section class="hero">
-        <span class="badge">🔥 火熱招募中</span>
-        <h1>兼職<br><span class="hot">全職也歡迎</span></h1>
-        <p class="sub">寶媽 · 大學生 · 上班族 皆可</p>
-        <a class="btn-line" href="https://line.me/ti/p/~lpk518" target="_blank" rel="noopener">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.02 2 10.98c0 2.92 1.41 5.52 3.62 7.2L5 21.5l3.55-1.7c1.08.3 2.24.46 3.45.46 5.52 0 10-4.02 10-8.98S17.52 2 12 2zm0 2.2c4.3 0 7.78 3.04 7.78 6.78s-3.48 6.78-7.78 6.78c-1.18 0-2.3-.2-3.32-.56l-.5-.18-2.04.98.38-1.98-.34-.4C4.82 15.06 4.22 13.58 4.22 10.98 4.22 7.24 7.7 4.2 12 4.2zm-3.05 5.3c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm6.1 0c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm-6.37 1.35c.47.48 1.05.86 1.72 1.13.18.07.37.07.53 0 .69-.27 1.28-.65 1.75-1.14.1-.1.23-.13.35-.07.12.05.16.19.12.3-.08.22-.55.64-.76.84-.33.32-.77.57-1.24.73-.28.1-.6.1-.88 0-.47-.16-.9-.41-1.23-.73-.2-.2-.67-.62-.76-.84-.04-.11 0-.25.12-.3.12-.06.25-.03.35.07z"/></svg>
-          加入 LINE 了解條件要求
-        </a>
-      </section>
-
-      <section class="perks">
-        <div class="perk">
+    <section class="section">
+      <h2 class="section-title">適合對象</h2>
+      <p class="section-desc">不管是誰，都歡迎加入</p>
+      <div class="who">
+        <div class="who-card">
           <div class="ic">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"></path><path d="M5 10v9h14v-9"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21.2l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.8z"></path></svg>
           </div>
           <span>寶媽</span>
         </div>
-        <div class="perk">
+        <div class="who-card">
           <div class="ic">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
           </div>
           <span>大學生</span>
         </div>
-        <div class="perk">
+        <div class="who-card">
           <div class="ic">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"></path></svg>
           </div>
           <span>上班族</span>
         </div>
-        <div class="perk">
-          <div class="ic">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 3"></path></svg>
-          </div>
-          <span>時間彈性</span>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <p class="foot">兼職 · 全職招募 · 歡迎聯繫了解條件要求</p>
-    </main>
+    <p class="foot">兼職 · 全職招募<br>歡迎聯繫了解條件要求</p>
   </div>
 
   <a class="float" href="https://line.me/ti/p/~lpk518" target="_blank" rel="noopener">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.02 2 10.98c0 2.92 1.41 5.52 3.62 7.2L5 21.5l3.55-1.7c1.08.3 2.24.46 3.45.46 5.52 0 10-4.02 10-8.98S17.52 2 12 2zm0 2.2c4.3 0 7.78 3.04 7.78 6.78s-3.48 6.78-7.78 6.78c-1.18 0-2.3-.2-3.32-.56l-.5-.18-2.04.98.38-1.98-.34-.4C4.82 15.06 4.22 13.58 4.22 10.98 4.22 7.24 7.7 4.2 12 4.2zm-3.05 5.3c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm6.1 0c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm-6.37 1.35c.47.48 1.05.86 1.72 1.13.18.07.37.07.53 0 .69-.27 1.28-.65 1.75-1.14.1-.1.23-.13.35-.07.12.05.16.19.12.3-.08.22-.55.64-.76.84-.33.32-.77.57-1.24.73-.28.1-.6.1-.88 0-.47-.16-.9-.41-1.23-.73-.2-.2-.67-.62-.76-.84-.04-.11 0-.25.12-.3.12-.06.25-.03.35.07z"/></svg>
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.02 2 10.98c0 2.92 1.41 5.52 3.62 7.2L5 21.5l3.55-1.7c1.08.3 2.24.46 3.45.46 5.52 0 10-4.02 10-8.98S17.52 2 12 2zm0 2.2c4.3 0 7.78 3.04 7.78 6.78s-3.48 6.78-7.78 6.78c-1.18 0-2.3-.2-3.32-.56l-.5-.18-2.04.98.38-1.98-.34-.4C4.82 15.06 4.22 13.58 4.22 10.98 4.22 7.24 7.7 4.2 12 4.2zm-3.05 5.3c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm6.1 0c-.6 0-1.1.5-1.1 1.1 0 .6.5 1.1 1.1 1.1s1.1-.5 1.1-1.1c0-.6-.5-1.1-1.1-1.1zm-6.37 1.35c.47.48 1.05.86 1.72 1.13.18.07.37.07.53 0 .69-.27 1.28-.65 1.75-1.14.1-.1.23-.13.35-.07.12.05.16.19.12.3-.08.22-.55.64-.76.84-.33.32-.77.57-1.24.73-.28.1-.6.1-.88 0-.47-.16-.9-.41-1.23-.73-.2-.2-.67-.62-.76-.84-.04-.11 0-.25.12-.3.12-.06.25-.03.35.07z"/></svg>
     LINE 立即諮詢
   </a>
 </body>
